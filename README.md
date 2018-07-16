@@ -47,7 +47,7 @@ The datasheets of the components that we used in our prototype can be found in t
 We printed the PCB and placed the components on the board with the service of http://beta-layout.com.
 
 ## Android Library
-To use the library, include libftsp.jar in your Android project. The capacitive images for the locla device can be accessed as follows:
+To use the library, include libftsp.jar in your Android project. The capacitive images for the local device can be accessed as follows:
 ```java
 LocalDeviceHandler localDeviceHandler = new LocalDeviceHandler();
 localDeviceHandler.setLocalCapImgListener(new LocalCapImgListener() {
