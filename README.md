@@ -68,7 +68,7 @@ try {
 } catch (SocketException e) {
     e.printStackTrace();
 }
-frontDeviceHandler.setSideReceiverMode(false);
+
 frontDeviceHandler.setFtspCapImgListener(new FTSPCapImgListener() {
     @Override
     public void onNewBackCapacitiveImage(CapacitiveImageTS capacitiveImageTS) {
