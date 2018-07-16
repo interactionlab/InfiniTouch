@@ -45,3 +45,49 @@ The datasheets of the components that we used in our prototype can be found in t
 - PCB board + FFC cable: http://diy.shops.hypeltd.com/DIY2//product_info.php?products_id=67
 
 We printed the PCB and placed the components on the board with the service of http://beta-layout.com.
+
+## Android Library
+To use the library, include libftsp.jar in your Android project. The capacitive images for the local device can be accessed as follows:
+```java
+LocalDeviceHandler localDeviceHandler = new LocalDeviceHandler();
+localDeviceHandler.setLocalCapImgListener(new LocalCapImgListener() {
+    @Override
+    public void onLocalCapImg(CapacitiveImageTS capImg) { // called approximately every 50ms
+        int[][] matrix = capImg.getMatrix(); // get the 27x15 capacitive image
+        int[] flattenedMatrix = capImg.getFlattenedMatrix(); // get a flattened 27x15 capacitive image
+        long imgTimestamp = capImg.getTimestamp(); // get timestamp of this image
+    }
+});
+```
+
+The following code is for the front unit. It provides the capacitive images of the front device (local) and further the retrieved capacitive imags of the back and the sides. All capacitive images can be retrieved within callbacks:
+
+```java
+try {
+    frontDeviceHandler = new FrontDeviceHandler(9584);
+} catch (SocketException e) {
+    e.printStackTrace();
+}
+frontDeviceHandler.setSideReceiverMode(false);
+frontDeviceHandler.setFtspCapImgListener(new FTSPCapImgListener() {
+    @Override
+    public void onNewBackCapacitiveImage(CapacitiveImageTS capacitiveImageTS) {
+        // backImage = capacitiveImageTS;
+    }
+
+    @Override
+    public void onNewFrontCapacitiveImage(CapacitiveImageTS capacitiveImageTS) {
+        // frontImage = capacitiveImageTS;
+    }
+
+    @Override
+    public void onNewSideCapacitiveImage(CapacitiveImageSide capacitiveImageSide) {
+        // sideImage = capacitiveImageSide;
+    }
+```
+
+The back unit uses the respective code to broadcast the capacitive images to the front unit. A callback handler can also be added if required.
+```java
+backDeviceHandler = new BackDeviceHandler(Constants.FRONT_IP, 9584);
+backDeviceHandler.startHandler(true);
+```
