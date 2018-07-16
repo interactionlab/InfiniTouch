@@ -13,7 +13,7 @@ identifies fingers with an accuracy of 95.78% while estimating their position wi
 demonstrate the usefulness of multiple use cases made possible with InfiniTouch, including finger-aware gestures and finger
 flexion state as an action modifier.
 
-<img src="https://raw.githubusercontent.com/interactionlab/InfiniTouch/master/Images/Prototype.png?token=ATCw2WgviWufs312FNd8PfTYb-LHO6tjks5bVfQgwA%3D%3D" height="300px"> <img src="https://github.com/interactionlab/InfiniTouch/blob/master/Images/Capacitive_Image.png" height="300px">
+<img src="https://github.com/interactionlab/InfiniTouch/blob/master/Images/Prototype.png" height="300px"> <img src="https://github.com/interactionlab/InfiniTouch/blob/master/Images/Capacitive_Image.png" height="300px">
 
 
 This work can be cited as follows:
