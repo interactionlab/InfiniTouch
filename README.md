@@ -25,7 +25,7 @@ This work can be cited as follows:
  series = {UIST '18},
  year = {2018},
  location = {Berlin, Germany},
- numpages = {13},
+ numpages = {14},
  publisher = {ACM},
  address = {New York, NY, USA}
 } 
