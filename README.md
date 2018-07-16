@@ -86,7 +86,7 @@ frontDeviceHandler.setFtspCapImgListener(new FTSPCapImgListener() {
     }
 ```
 
-The back unit uses the respective code to broadcast the capacitive images to the front unit: 
+The back unit uses the respective code to broadcast the capacitive images to the front unit. A callback handler can also be added if required.
 ```java
 backDeviceHandler = new BackDeviceHandler(Constants.FRONT_IP, 9584);
 backDeviceHandler.startHandler(true);
