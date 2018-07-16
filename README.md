@@ -43,3 +43,5 @@ The datasheets of the components that we used in our prototype can be found in t
 - Tactile Switch: https://cdn-shop.adafruit.com/datasheets/B3F-1000-Omron.pdf
 - FH12-50S-0.5SH(05): https://www.datasheets360.com/part/detail/fh12-50s-0-5sh-05/8224149447061018923/
 - PCB board + FFC cable: http://diy.shops.hypeltd.com/DIY2//product_info.php?products_id=67
+
+We printed the PCB and placed the components on the board with the service of http://beta-layout.com.
