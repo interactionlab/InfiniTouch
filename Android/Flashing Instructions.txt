@@ -1,0 +1,5 @@
+- This kernel is only for the LG Nexus 5 (hammerhead)
+- Flash TWRP using fastboot first 
+- Then use TWRP to flash the kernel. Instructions: https://twrp.me/lg/lgnexus5.html
+
+Capacitive images are written to /proc/capacitive_matrix. You can use libftsp.jar as described in the README.MD to access the capacitive images in your own Android application.
