@@ -25,14 +25,14 @@ This work can be cited as follows:
  series = {UIST '18},
  year = {2018},
  location = {Berlin, Germany},
- numpages = {13},
+ numpages = {14},
  publisher = {ACM},
  address = {New York, NY, USA}
 } 
 </pre>
 
 ## Dataset
-The dataset can be downloaded at: (currently uploading). After downloading, place the content of this folder into a folder named 'data'. Place the 'data' folder into the same directory as the Jupyter notebooks. Run the content of these notebooks to create a HDF5 file with which the model can then be trained.
+The dataset can be downloaded at: https://www.dropbox.com/s/v8n8uaf5vncusyn/InfiniTouch_Dataset.zip?dl=0. After downloading, place the content of this folder into a folder named 'data'. Place the 'data' folder into the same directory as the Jupyter notebooks. Run the content of these notebooks to create a HDF5 file with which the model can then be trained.
 
 ## Prototype
 The datasheets of the components that we used in our prototype can be found in the following list of URLs:
@@ -68,7 +68,7 @@ try {
 } catch (SocketException e) {
     e.printStackTrace();
 }
-frontDeviceHandler.setSideReceiverMode(false);
+
 frontDeviceHandler.setFtspCapImgListener(new FTSPCapImgListener() {
     @Override
     public void onNewBackCapacitiveImage(CapacitiveImageTS capacitiveImageTS) {
