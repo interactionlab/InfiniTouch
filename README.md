@@ -88,7 +88,7 @@ frontDeviceHandler.setFtspCapImgListener(new FTSPCapImgListener() {
     public void onNewSideCapacitiveImage(CapacitiveImageSide capacitiveImageSide) {
         // sideImage = capacitiveImageSide;
     }
-}
+});
 frontDeviceHandler.startHandler(true);
 ```
 
