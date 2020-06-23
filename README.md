@@ -24,6 +24,9 @@ This work can be cited as follows:
  booktitle = {Proceedings of the 31th Annual ACM Symposium on User Interface Software and Technology},
  series = {UIST '18},
  year = {2018},
+ isbn = {978-1-4503-5948-1},
+ doi = {10.1145/3242587.3242605},
+ url = {http://doi.acm.org/10.1145/3242587.3242605},
  location = {Berlin, Germany},
  numpages = {14},
  publisher = {ACM},
@@ -58,6 +61,7 @@ localDeviceHandler.setLocalCapImgListener(new LocalCapImgListener() {
         long imgTimestamp = capImg.getTimestamp(); // get timestamp of this image
     }
 });
+localDeviceHandler.startHandler();
 ```
 
 The following code is for the front unit. It provides the capacitive images of the front device (local) and further the retrieved capacitive imags of the back and the sides. All capacitive images can be retrieved within callbacks:
@@ -84,6 +88,8 @@ frontDeviceHandler.setFtspCapImgListener(new FTSPCapImgListener() {
     public void onNewSideCapacitiveImage(CapacitiveImageSide capacitiveImageSide) {
         // sideImage = capacitiveImageSide;
     }
+});
+frontDeviceHandler.startHandler(true);
 ```
 
 The back unit uses the respective code to broadcast the capacitive images to the front unit. A callback handler can also be added if required.
